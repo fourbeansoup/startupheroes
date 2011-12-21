@@ -1,8 +1,8 @@
 xml.instruct! :xml, :version => "1.0" 
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "Webpulp.tv"
-    xml.description "A podcast that explores the guts of the web"
+    xml.title "StartupHeroes.TV"
+    xml.description "A video podcast that interviews heroes within the startup community."
     xml.link episodes_url
 
     for episode in @episodes
