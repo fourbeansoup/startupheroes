@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @episode.title
+%p
+  %b Guest:
+  = @episode.guest
+%p
+  %b Company:
+  = @episode.company
+%p
+  %b Show notes:
+  = @episode.show_notes
+%p
+  %b Intro:
+  = @episode.intro
+%p
+  %b Number:
+  = @episode.number
+
+= link_to 'Edit', edit_episode_path(@episode)
+\|
+= link_to 'Back', episodes_path

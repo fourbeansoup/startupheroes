@@ -1,0 +1,58 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %title StartupHeroes
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    %link{:href => "http://fonts.googleapis.com/css?family=Lato:100italic,300,400|PT+Serif:400,400italic,700,700italic", :rel => "stylesheet", :type => "text/css"}/
+    /[if IE] <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if lt IE 9] <link rel="stylesheet" media="all" type="text/css" href="css/ie.css" />
+  %body{:class => body_class}
+    .w1
+      #wrapper
+        %header#header
+          %strong.logo= link_to "StartupHeroes.tv", root_url
+          %ul.social-networks
+            %li
+              = link_to "itunes", "http://itunes.apple.com/us/podcast/webpulp-tv/id371328694", :class => "itunes"
+            %li
+              = link_to "twitter", "http://twitter.com/webpulptv", :class => "twitter"
+            %li
+              = link_to "facebook", "http://facebook.com/webpulptv", :class => "facebook"
+            %li
+              = link_to "rss", rss_url, :class => "rss"
+          %nav.nav-block
+            %ul.nav-left
+              %li= link_to "shows", "#"
+              %li= link_to "live", "#"
+              %li= link_to "advertise", "#"
+            %ul.nav-right
+              %li= link_to "itunes", "#"
+              %li= link_to "about", "#"
+              %li= link_to "rss", "#"
+        / header end
+        %section#main
+          = yield
+        / main end
+    %footer#footer
+      %strong.copy
+        All Content Copyright &copy; 2010 - 
+        = Date.today.year 
+        Gaslight Software, LLC
+    / footer end
+
+
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11472568-7']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  = javascript_include_tag "http://honeysquares.com/honeycombs/webpulp"
+

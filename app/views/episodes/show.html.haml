@@ -1,0 +1,21 @@
+%article#content
+  %h1= @episode.title
+  .video-box
+    .video-holder
+      %iframe{:src => "http://player.vimeo.com/video/#{@episode.vimeo_id}?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1", :width => "630", :height => "360", :frameborder =>"0"}
+    %p
+      Hosted by Josh Owens
+  - if @episode.bandwidth_sponsor.present?
+    .info-block
+      %strong.bandwidth-logo
+        = link_to "http://#{@episode.bandwidth_sponsor.url}/" do
+          = image_tag @episode.bandwidth_sponsor.logo.url
+      %p
+        Bandwidth sponsored by
+        = link_to @episode.bandwidth_sponsor.url.capitalize, "http://#{@episode.bandwidth_sponsor.url}/"
+  .text-holder
+    %p=raw @episode.intro
+    %h3 Show Notes
+    = raw @episode.rendered_show_notes
+/ content end
+= render :partial => "sidebar"

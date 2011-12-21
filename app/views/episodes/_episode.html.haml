@@ -1,0 +1,11 @@
+.video
+  .video-holder
+    = image_tag(episode.headshot.url)
+    = link_to episode do
+      %span= episode.guest
+      %span.overlay
+  %p
+    = episode.title
+  %strong.by
+    Hosted by Josh Owens
+
