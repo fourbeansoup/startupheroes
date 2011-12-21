@@ -162,8 +162,17 @@ header:after
     display: block
     clear: both
   .sponsor
+    height: 194px
+    width: 194px
     float: right
-    margin: -68px 0 0 80px
+    -webkit-transform: rotate(23deg)
+    -moz-transform: rotate(23deg)
+    -o-transform: rotate(23deg)
+    transform: rotate(23deg)
+    margin: -60px 0 0 60px
+    background: url(/assets/sponsor.gif) no-repeat
+    img
+      padding: 45px 0 0 35px
   #honeysquares
     p
       display: none
@@ -262,7 +271,7 @@ header:after
     position: absolute
     top: 0
     left: 0
-    z-index: 5
+    z-index: -1
     cursor: pointer
   p
     margin: 0
@@ -301,7 +310,7 @@ header:after
   width: 241px
   height: 221px
   margin: -31px 0 3px 10px
-  padding: 61px 0 123px 63px
+  padding: 48px 0 123px 63px
   .text-area
     width: 210px
     font-size: 32px
@@ -314,6 +323,14 @@ header:after
     transform: rotate(-4deg)
     p
       margin: 0
+    img
+      position: absolute
+      -webkit-transform: rotate(23deg)
+      -moz-transform: rotate(23deg)
+      -o-transform: rotate(23deg)
+      transform: rotate(23deg)
+      bottom: -110px
+      left: -44px
   strong
     font-weight: normal
     color: #c23a34

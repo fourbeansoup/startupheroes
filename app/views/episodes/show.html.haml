@@ -3,6 +3,7 @@
   .video-box
     .video-holder
       %iframe{:src => "http://player.vimeo.com/video/#{@episode.vimeo_id}?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1", :width => "630", :height => "360", :frameborder =>"0"}
+      %span.overlay
     %p
       Hosted by Josh Owens
   - if @episode.bandwidth_sponsor.present?
