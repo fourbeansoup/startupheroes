@@ -21,7 +21,7 @@ class EpisodesController < ApplicationController
   end
 
   def rss
-    redirect_to 'http://feeds.feedburner.com/webpulptv', :status => 302
+    redirect_to 'http://feeds.feedburner.com/startupheroes', :status => 302
   end
 
   def old_url
